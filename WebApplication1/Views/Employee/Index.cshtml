@@ -1,0 +1,24 @@
+﻿<h2>Danh sách nhân viên</h2>
+<hr>
+<table class="table border">
+    <tr>
+        <th>
+            <label>Mã nhân viên</label>
+
+        </th>
+        <th>
+            <label>Tên Nhân Viên</label>
+        </th>
+        <th>Tuổi</th>
+    </tr>
+
+    @foreach (var item in ViewData["Employee"] as List<DemoMVC.Models.Employee>)
+
+    {
+        <tr>
+            <td>@item.EmployeeID</td>
+            <td>@item.EmployeeName</td>
+            <td>@item.Age</td>
+        </tr>
+    }
+</table>
